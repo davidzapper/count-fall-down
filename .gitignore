@@ -4,3 +4,14 @@
 .import/
 export/
 *.tmp
+
+
+# Exports
+Exports/
+
+# Videos
+*.mov
+
+# Affinity Designer
+*.af
+*~lock*
