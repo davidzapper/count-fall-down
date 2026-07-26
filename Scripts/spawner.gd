@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var count: CanvasLayer = $"../../UI/Count"
+
 @export var objects : Array[PackedScene]
 
 # Called when the node enters the scene tree for the first time.
@@ -8,6 +10,8 @@ func _ready() -> void:
 
 func spawn():
 
+	count.up_count()
+	
 	var scene = objects.pick_random()
 	var obj = scene.instantiate()
 	

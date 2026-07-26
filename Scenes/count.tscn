@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3awf5ucwwnr7"]
+
+[ext_resource type="Script" uid="uid://s0jocpucoq7b" path="res://Scripts/count.gd" id="1_op7j2"]
+
+[node name="Count" type="CanvasLayer" unique_id=866815768]
+script = ExtResource("1_op7j2")
+
+[node name="Count Label" type="Label" parent="." unique_id=1465777762]
+offset_left = 252.0
+offset_top = 122.0
+offset_right = 475.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 50
+text = "Count: "
+horizontal_alignment = 1
