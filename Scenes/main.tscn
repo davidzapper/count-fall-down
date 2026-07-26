@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://b58dnceh2sbne" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://c3027rq4h47ll" path="res://Scripts/spawner.gd" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://cht7j0ld44vpe" path="res://Assets/CountFallDown-Art.png" id="2_cbgmd"]
-[ext_resource type="PackedScene" path="res://Scenes/count.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://dbx5y8sd25eh0" path="res://Scenes/count.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" uid="uid://d32fmi4mvl71s" path="res://Scenes/Objects/Sign.tscn" id="5_6bp64"]
-[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cn214q5pdvf33" path="res://Scenes/player.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://b5iex0d1ac383" path="res://Scenes/Objects/Icecream.tscn" id="6_344ge"]
 [ext_resource type="PackedScene" uid="uid://dnqu38x8edyq5" path="res://Scenes/Objects/Car2.tscn" id="6_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://b5ovtnpqapq2e" path="res://Scenes/Objects/Crate2.tscn" id="7_ynf5e"]
@@ -212,7 +212,7 @@ tile_size = Vector2i(100, 100)
 sources/0 = SubResource("TileSetAtlasSource_cbgmd")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
-size = Vector2(720, 113)
+size = Vector2(898, 113)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bo1nx"]
 atlas = ExtResource("1_jjgbg")
@@ -247,11 +247,12 @@ layer_0/tile_data = PackedInt32Array(-1114113, 196608, 15, -1048577, 196608, 15,
 position = Vector2(0, 1160)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Floor" unique_id=626093404]
-position = Vector2(359, 56.5)
+position = Vector2(350, 56.5)
 shape = SubResource("RectangleShape2D_jjgbg")
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Floor" unique_id=1919552517]
-position = Vector2(361, 56)
+position = Vector2(350.5, 56)
+scale = Vector2(1.26014, 1)
 texture = SubResource("AtlasTexture_bo1nx")
 
 [node name="Wall" type="StaticBody2D" parent="World" unique_id=1691752427]
@@ -290,6 +291,15 @@ offset_right = 490.0
 offset_bottom = 805.0
 theme_override_font_sizes/font_size = 59
 text = "Start"
+
+[node name="Label" type="Label" parent="UI/StartScreen" unique_id=844907929]
+offset_left = 188.0
+offset_top = 237.0
+offset_right = 551.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "Count Fall Down"
 
 [node name="Player" parent="." unique_id=1094075983 instance=ExtResource("5_kry3j")]
 z_index = 10

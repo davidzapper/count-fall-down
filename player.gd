@@ -24,6 +24,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	elif canmove == true:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if direction == 1:
+		pas.flip_h = false
+	if direction == -1:
+		pas.flip_h = true
 	
 	# Animation Changes
 	if is_on_floor() == true:

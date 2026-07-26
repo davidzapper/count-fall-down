@@ -9,7 +9,10 @@ region = Rect2(1220.1694, 2056.7815, 349.23706, 163.32935)
 [node name="Node2D" type="RigidBody2D" unique_id=837892599]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094830734]
+position = Vector2(1, 1)
+scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_ry3sx")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1365373260]
+scale = Vector2(2, 2)
 polygon = PackedVector2Array(93, -77, 120, -48, 172, -57, 144, -23, 117, -19, 82, 31, -4, 63, -25, 76, -59, 69, -72, 74, -98, 39, -137, 21, -167, -9, -167, -37, -119, -61, -61, -64, 6, -42, 53, -10, 82, -12, 92, -26, 83, -52)
