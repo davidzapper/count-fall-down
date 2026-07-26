@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs2cpet0h5f6u"]
+
+[ext_resource type="Texture2D" uid="uid://wfwjd2fk1vn6" path="res://Assets/CountFallDown.png" id="1_u5q1b"]
+
+[node name="Car" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u5q1b")
+region_enabled = true
+region_rect = Rect2(1025.9128, 135.13042, 354.2567, 204.67458)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(127, -98, 168, -22, 172, 41, 162, 65, 124, 69, 103, 90, 65, 90, 45, 73, -63, 72, -81, 94, -127, 96, -134, 72, -166, 63, -174, 3, -95, -26, -56, -89)
