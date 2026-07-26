@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjmlll8s8wxav"]
+
+[ext_resource type="Texture2D" uid="uid://cht7j0ld44vpe" path="res://Assets/CountFallDown-Art.png" id="1_8242c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry3sx"]
+atlas = ExtResource("1_8242c")
+region = Rect2(1454.3917, 2263.0535, 59.2511, 54.807373)
+
+[node name="Node2D" type="RigidBody2D" unique_id=837892599]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094830734]
+texture = SubResource("AtlasTexture_ry3sx")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1365373260]
+polygon = PackedVector2Array(-1, -26, 23, -19, 27, 2, 22, 13, 9, 16, 7, 26, -6, 25, -17, 12, -27, -11, -19, -20)

@@ -3,9 +3,28 @@
 [ext_resource type="Texture2D" uid="uid://wfwjd2fk1vn6" path="res://Assets/CountFallDown.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://b58dnceh2sbne" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://c3027rq4h47ll" path="res://Scripts/spawner.gd" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://cs2cpet0h5f6u" path="res://Scenes/Objects/Car.tscn" id="4_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://d3awf5ucwwnr7" path="res://Scenes/count.tscn" id="4_kry3j"]
-[ext_resource type="PackedScene" uid="uid://c41yo1nf7uvcl" path="res://Scenes/player.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" path="res://Scenes/count.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://d32fmi4mvl71s" path="res://Scenes/Objects/Sign.tscn" id="5_6bp64"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://b5iex0d1ac383" path="res://Scenes/Objects/Icecream.tscn" id="6_344ge"]
+[ext_resource type="PackedScene" uid="uid://dnqu38x8edyq5" path="res://Scenes/Objects/Car2.tscn" id="6_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://b5ovtnpqapq2e" path="res://Scenes/Objects/Crate2.tscn" id="7_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://c77n2d6x1kohn" path="res://Scenes/Objects/Whale.tscn" id="8_hptm8"]
+[ext_resource type="PackedScene" uid="uid://chl388n40i3mi" path="res://Scenes/Objects/Cola.tscn" id="9_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://bojajno71cfy1" path="res://Scenes/Objects/PizzaSlice.tscn" id="10_6iyac"]
+[ext_resource type="PackedScene" uid="uid://5dwb7o7o7mr0" path="res://Scenes/Objects/PizzaGuy.tscn" id="11_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://6jm53smr0jfl" path="res://Scenes/Objects/PizzaBox.tscn" id="12_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://c1q5bh0pv6ium" path="res://Scenes/Objects/HairDryer.tscn" id="13_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://c28ta5yuexw03" path="res://Scenes/Objects/Bell.tscn" id="14_k12tt"]
+[ext_resource type="PackedScene" uid="uid://j0axx5itchh6" path="res://Scenes/Objects/Lego.tscn" id="15_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://bjmlll8s8wxav" path="res://Scenes/Objects/TeaCup.tscn" id="16_b3802"]
+[ext_resource type="PackedScene" uid="uid://c8ym1t35teugf" path="res://Scenes/Objects/Ladder.tscn" id="17_fevyy"]
+[ext_resource type="PackedScene" uid="uid://c3twirrgpa8qb" path="res://Scenes/Objects/Rainbow.tscn" id="18_hibaj"]
+[ext_resource type="PackedScene" uid="uid://c2d7bg2oj5fpi" path="res://Scenes/Objects/Trophy.tscn" id="19_pdsj5"]
+[ext_resource type="PackedScene" uid="uid://bsodbaa0hnth8" path="res://Scenes/Objects/Panda.tscn" id="20_ee4r6"]
+[ext_resource type="PackedScene" uid="uid://wn2uvugx43k1" path="res://Scenes/Objects/OneEyeCat.tscn" id="21_gt3je"]
+[ext_resource type="PackedScene" uid="uid://j0kn5wactce1" path="res://Scenes/Objects/Chips.tscn" id="22_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://c107kx8wv0mx4" path="res://Scenes/Objects/Couch.tscn" id="23_u50mg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
 size = Vector2(720, 113)
@@ -16,32 +35,11 @@ region = Rect2(78.37773, 1242.8123, 715.30853, 118.14209)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjvhh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7iub"]
-size = Vector2(216, 199)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rhlm"]
-atlas = ExtResource("1_jjgbg")
-region = Rect2(1161.891, 398.52423, 218.72205, 200.38611)
-
-[sub_resource type="PackedScene" id="PackedScene_8gbba"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [PackedInt32Array(), PackedInt32Array()],
-"names": PackedStringArray("Crate", "RigidBody2D", "CollisionShape2D", "CollisionShape2D", "position", "shape", "Sprite2D", "Sprite2D", "texture"),
-"node_count": 3,
-"node_ids": PackedInt32Array(0, 0, 0),
-"node_paths": [NodePath("."), NodePath(".")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 1073741824, 0, 3, 2, -1, 2, 4, 0, 5, 1, 0, 1073741825, 0, 7, 6, -1, 1, 8, 2, 0),
-"variants": [Vector2(0, 0.5), SubResource("RectangleShape2D_i7iub"), SubResource("AtlasTexture_6rhlm")],
-"version": 3
-}
-
-[node name="Main" type="Node2D" unique_id=1744273329 node_paths=PackedStringArray("spawnTimer", "startScreen")]
+[node name="Main" type="Node2D" unique_id=1744273329 node_paths=PackedStringArray("spawnTimer", "startScreen", "counter")]
 script = ExtResource("1_kry3j")
 spawnTimer = NodePath("World/Spawner/SpawnTimer")
 startScreen = NodePath("UI/StartScreen")
+counter = NodePath("UI/Count")
 
 [node name="World" type="Node" parent="." unique_id=971597149]
 
@@ -72,7 +70,7 @@ shape = SubResource("WorldBoundaryShape2D_jjvhh")
 [node name="Spawner" type="Node2D" parent="World" unique_id=1022280631]
 position = Vector2(346, 86)
 script = ExtResource("2_bo1nx")
-objects = Array[PackedScene]([SubResource("PackedScene_8gbba"), ExtResource("4_jjvhh")])
+objects = Array[PackedScene]([ExtResource("5_6bp64"), ExtResource("6_344ge"), ExtResource("6_ynf5e"), ExtResource("7_ynf5e"), ExtResource("8_hptm8"), ExtResource("9_d1ilt"), ExtResource("10_6iyac"), ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k"), ExtResource("14_k12tt"), ExtResource("15_h1bgf"), ExtResource("16_b3802"), ExtResource("17_fevyy"), ExtResource("18_hibaj"), ExtResource("19_pdsj5"), ExtResource("20_ee4r6"), ExtResource("21_gt3je"), ExtResource("22_3pmx8"), ExtResource("23_u50mg")])
 
 [node name="SpawnTimer" type="Timer" parent="World/Spawner" unique_id=778308745]
 wait_time = 1.5

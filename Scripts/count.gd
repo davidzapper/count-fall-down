@@ -18,3 +18,7 @@ func _ready() -> void:
 func up_count():
 	obj_amount += 1
 	count_label.text = prefix_count + str(obj_amount)
+
+func reset():
+	obj_amount = 0
+	count_label.text = prefix_count + str(obj_amount)

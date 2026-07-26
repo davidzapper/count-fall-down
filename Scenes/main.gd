@@ -2,6 +2,7 @@ extends Node2D
 
 @export var spawnTimer : Timer
 @export var startScreen : Node2D
+@export var counter : CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +16,7 @@ func _process(delta: float) -> void:
 func start() -> void:
 	startScreen.visible = false
 	spawnTimer.start()
+	counter.reset()
 	#get_node()
 
 

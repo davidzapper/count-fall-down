@@ -1,13 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs2cpet0h5f6u"]
+[gd_scene format=3 uid="uid://j4uqoogyq6sm"]
 
-[ext_resource type="Texture2D" uid="uid://wfwjd2fk1vn6" path="res://Assets/CountFallDown.png" id="1_u5q1b"]
+[ext_resource type="Texture2D" uid="uid://cht7j0ld44vpe" path="res://Assets/CountFallDown-Art.png" id="1_u5q1b"]
 
-[node name="Car" type="RigidBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2i4v"]
+atlas = ExtResource("1_u5q1b")
+region = Rect2(1239, 1742.25, 169.5, 160)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_u5q1b")
+[node name="Car" type="RigidBody2D" unique_id=10134708]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1474540582]
+texture = SubResource("AtlasTexture_q2i4v")
 region_enabled = true
-region_rect = Rect2(1025.9128, 135.13042, 354.2567, 204.67458)
+region_rect = Rect2(0, 0, 170.30835, 159.54248)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(127, -98, 168, -22, 172, 41, 162, 65, 124, 69, 103, 90, 65, 90, 45, 73, -63, 72, -81, 94, -127, 96, -134, 72, -166, 63, -174, 3, -95, -26, -56, -89)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1722763815]
+position = Vector2(265, 91)
+polygon = PackedVector2Array(-266, -170, -239, -165, -220, -143, -208, -112, -199, -65, -185, -67, -182, -54, -198, -50, -204, -29, -225, -22, -238, -29, -245, -39, -262, -39, -269, -24, -287, -19, -303, -25, -309, -37, -345, -36, -351, -51, -342, -65, -326, -73, -324, -104, -312, -135, -292, -160)
