@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkk5g7pj4vg41"]
+[gd_scene format=3 uid="uid://bkk5g7pj4vg41"]
 
 [ext_resource type="Texture2D" uid="uid://wfwjd2fk1vn6" path="res://Assets/CountFallDown.png" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://b58dnceh2sbne" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="Script" uid="uid://c3027rq4h47ll" path="res://Scripts/spawner.gd" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cnigilec0ojc3" path="res://Scenes/Objects/Crate.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://cs2cpet0h5f6u" path="res://Scenes/Objects/Car.tscn" id="4_jjvhh"]
@@ -12,32 +13,44 @@ size = Vector2(720, 113)
 atlas = ExtResource("1_jjgbg")
 region = Rect2(78.37773, 1242.8123, 715.30853, 118.14209)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1744273329 node_paths=PackedStringArray("spawnTimer", "startScreen")]
+script = ExtResource("1_kry3j")
+spawnTimer = NodePath("World/Spawner/SpawnTimer")
+startScreen = NodePath("UI/StartScreen")
 
-[node name="World" type="Node" parent="."]
+[node name="World" type="Node" parent="." unique_id=971597149]
 
-[node name="Floor" type="StaticBody2D" parent="World"]
+[node name="Floor" type="StaticBody2D" parent="World" unique_id=939310310]
 position = Vector2(0, 1160)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Floor" unique_id=626093404]
 position = Vector2(359, 56.5)
 shape = SubResource("RectangleShape2D_jjgbg")
 
-[node name="Sprite2D" type="Sprite2D" parent="World/Floor"]
+[node name="Sprite2D" type="Sprite2D" parent="World/Floor" unique_id=1919552517]
 position = Vector2(361, 56)
 texture = SubResource("AtlasTexture_bo1nx")
 
-[node name="Spawner" type="Node2D" parent="World"]
+[node name="Spawner" type="Node2D" parent="World" unique_id=1022280631]
 position = Vector2(346, 86)
 script = ExtResource("2_bo1nx")
 objects = Array[PackedScene]([ExtResource("3_8gbba"), ExtResource("4_jjvhh")])
 
-[node name="SpawnTimer" type="Timer" parent="World/Spawner"]
+[node name="SpawnTimer" type="Timer" parent="World/Spawner" unique_id=778308745]
 wait_time = 1.5
-autostart = true
 
-[node name="Objects" type="Node2D" parent="."]
+[node name="Objects" type="Node2D" parent="." unique_id=1440201744]
 
-[node name="UI" type="Node2D" parent="."]
+[node name="UI" type="Node2D" parent="." unique_id=2018144387]
+
+[node name="StartScreen" type="Node2D" parent="UI" unique_id=513067911]
+
+[node name="StartButton" type="Button" parent="UI/StartScreen" unique_id=71112936]
+offset_left = 276.0
+offset_top = 650.0
+offset_right = 490.0
+offset_bottom = 805.0
+text = "Start"
 
 [connection signal="timeout" from="World/Spawner/SpawnTimer" to="World/Spawner" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="UI/StartScreen/StartButton" to="." method="_on_start_button_pressed"]
